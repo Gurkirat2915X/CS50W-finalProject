@@ -1,0 +1,80 @@
+{% extends 'layouts/layout1.html' %} 
+{% block title %} 
+Agritech - Result 
+{%endblock title %} 
+{% load static %} 
+{% block css_files %}
+<link rel="stylesheet" href="{% static '/css/result.css' %}" />
+{% endblock css_files %} 
+{% block content %} '
+{{detection.name}} 
+{% if detection.result == None %}
+<section id="results">
+  <div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Results</h1>
+
+      <h2>No disease Detected</h2>
+
+      <h3>Image Uploaded</h3>
+      <img
+        class="sent-image"
+        src="{{media_url}}{{detection.image}}"
+        alt="Actual Disease"
+      />
+    </div>
+  </div>
+</section>
+{% else %}
+<section id="results">
+  <div class="container my-5">
+    <div class="p-5 text-center bg-body-tertiary rounded-3">
+      <h1 class="text-body-emphasis">Results</h1>
+
+      <h2>The disease detected is {{detection.result}}</h2>
+
+      <h3>Image Uploaded</h3>
+      <img
+        class="sent-image"
+        src="{{media_url}}{{detection.image}}"
+        alt="Actual Disease"
+      />
+      <h3>Image Detected</h3>
+      <img
+        class="received-image"
+        src="{{media_url}}{{detection.detection_img}}"
+        alt="Predicted Disease"
+      />
+      <h3>Confidence: {{detection.confidence}}%</h3>
+      <p class="date">Detected on {{detection.date}}</p>
+
+      <a href="/detect">
+        <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+          Detect More
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-arrow-right"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"
+            />
+          </svg>
+        </button>
+      </a>
+      <br>
+      <div>
+        <h3>Treatment Recommendations</h3>
+      {% for tip in tips %}
+        <a>{{tip}}</a><br>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %} 
+{% endblock content %}

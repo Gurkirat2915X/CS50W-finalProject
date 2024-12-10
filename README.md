@@ -1,5 +1,5 @@
 # AgriTech Project
-
+## Project link: https://github.com/Gurkirat2915X/CS50W-finalProject.git
 ## Overview
 
 AgriTech is a comprehensive solution designed to assist farmers and agricultural enthusiasts in identifying plant diseases through image analysis. The project leverages advanced deep learning models, including YOLOv11 and SAM2, to detect and classify diseases affecting various parts of plants such as leaves, stems, and fruits.

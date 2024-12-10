@@ -40,7 +40,6 @@
             <ul class="nav nav-pills ms-auto">
                 <li class="nav-item"><a href="{% url 'disease_detector:index' %}" class="nav-link" id="home_link" aria-current="page">Home</a></li>
                 <li class="nav-item"><a id="model_link" href="{% url 'disease_detector:model_intro' %}" class="nav-link">The Model</a></li>
-                <li class="nav-item"><a id="about_link" class="nav-link" href="{% url 'disease_detector:team' %}">About</a>
                 </li>
                 
                 {% if user.is_authenticated %}
@@ -74,18 +73,6 @@
             <li class="nav-item mb-2"><a href="{% url 'disease_detector:index'%}#overview" class="nav-link p-0 text-body-secondary">Overview</a></li>
             <li class="nav-item mb-2"><a href="{% url 'disease_detector:model_intro' %}" class="nav-link p-0 text-body-secondary">The Model</a></li>
             <li class="nav-item mb-2"><a href="{% url 'disease_detector:detect' %}" class="nav-link p-0 text-body-secondary">Detect Disease</a></li>
-            <li class="nav-item mb-2"><a href="{% url 'disease_detector:team' %}" class="nav-link p-0 text-body-secondary">About Us</a></li>
-          </ul>
-        </div>
-    
-        <div class="col col-md-3">
-          <h5 class="footer-item">The Team</h5>
-          <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="/team#gurkirat" class="nav-link p-0 text-body-secondary">Gurkirat Singh Dhillon</a></li>
-              <li class="nav-item mb-2"><a href="{% url 'disease_detector:team' %}#sounak" class="nav-link p-0 text-body-secondary">Sounak Pal</a></li>
-              <li class="nav-item mb-2"><a href="{% url 'disease_detector:team' %}#pratham" class="nav-link p-0 text-body-secondary">Pratham Kashyap</a></li>
-              <li class="nav-item mb-2"><a href="{% url 'disease_detector:team' %}#swapnil" class="nav-link p-0 text-body-secondary">Swapnil Prabhat</a></li>
-              <li class="nav-item mb-2"><a href="{% url 'disease_detector:team' %}#harshit" class="nav-link p-0 text-body-secondary">Harshit Chugh</a></li>
           </ul>
         </div>
       </footer>

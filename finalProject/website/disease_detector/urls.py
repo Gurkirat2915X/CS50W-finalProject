@@ -12,7 +12,6 @@ urlpatterns = [
     path("register", views.register, name="register"),
     path("dashboard", views.dashboard, name="dashboard"),
     path("model_intro", views.model_intro, name="model_intro"),
-    path("team", views.team, name="team"),
     path("detect", views.detect, name="detect"),
     path("result/<int:id>", views.result, name="result"),
     path("chat", views.chat, name="chat"),

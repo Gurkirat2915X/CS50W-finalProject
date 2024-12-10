@@ -84,8 +84,7 @@ def model_intro(request):
     return render(request, "pages/model_intro.html")
 
 
-def team(request):
-    return render(request, "pages/team.html")
+
 
 
 @login_required(login_url="disease_detector:login")

@@ -36,7 +36,7 @@ AgriTech stands out from existing solutions due to its unique combination of fea
 - **User-Friendly Interface**: Provides an intuitive and easy-to-use interface for users to upload images and receive real-time analysis.
 - **User Authentication**: Implements user authentication using Django's built-in authentication system, ensuring secure access to the application.
 
-#### How it is different previous projects present in the course:
+### How it is different previous projects present in the course:
 Here I will discuss how AgriTech is different from the previous projects present in the course and how it stands out as a unique project.
 
 - **Old CS50W Pizza Project:**
